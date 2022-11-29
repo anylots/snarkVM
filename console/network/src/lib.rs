@@ -93,7 +93,7 @@ pub trait Network:
     /// The genesis block coinbase target.
     const GENESIS_COINBASE_TARGET: u64 = (1u64 << 10).saturating_sub(1); // 11 1111 1111
     /// The genesis block proof target.
-    const GENESIS_PROOF_TARGET: u64 = 8; // 00 0000 1000
+    const GENESIS_PROOF_TARGET: u64 = 4; // 00 0000 1000
 
     /// The starting supply of Aleo credits.
     const STARTING_SUPPLY: u64 = 1_100_000_000_000_000; // 1.1B credits
