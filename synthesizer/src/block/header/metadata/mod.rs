@@ -73,10 +73,11 @@ impl<N: Network> Metadata<N> {
             _phantom: PhantomData,
         };
         // Ensure the header is valid.
-        match metadata.is_valid() {
-            true => Ok(metadata),
-            false => bail!("Invalid block metadata: {:?}", metadata),
-        }
+        Ok(metadata)
+        // match metadata.is_valid() {
+        //     true => Ok(metadata),
+        //     false => bail!("Invalid block metadata: {:?}", metadata),
+        // }
     }
 
     /// Returns `true` if the block header is well-formed.
