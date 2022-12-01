@@ -54,10 +54,11 @@ impl<N: Network> Header<N> {
         // Construct a new block header.
         let header = Self { previous_state_root, transactions_root, coinbase_accumulator_point, metadata };
         // Ensure the header is valid.
-        match header.is_valid() {
-            true => Ok(header),
-            false => bail!("Invalid block header: {:?}", header),
-        }
+        Ok(header)
+        // match header.is_valid() {
+        //     true => Ok(header),
+        //     false => bail!("Invalid block header: {:?}", header),
+        // }
     }
 
     /// Returns `true` if the block header is well-formed.
