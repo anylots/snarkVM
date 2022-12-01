@@ -93,13 +93,13 @@ pub trait Network:
     /// The genesis block coinbase target.
     const GENESIS_COINBASE_TARGET: u64 = (1u64 << 10).saturating_sub(1); // 11 1111 1111
     /// The genesis block proof target.
-    const GENESIS_PROOF_TARGET: u64 = 4; // 00 0000 1000
+    const GENESIS_PROOF_TARGET: u64 = 8; // 00 0000 1000
 
     /// The starting supply of Aleo credits.
     const STARTING_SUPPLY: u64 = 1_100_000_000_000_000; // 1.1B credits
 
     /// The anchor time per block in seconds, which must be greater than the round time per block.
-    const ANCHOR_TIME: u16 = 25;
+    const ANCHOR_TIME: u16 = 10;
     /// The coinbase puzzle degree.
     const COINBASE_PUZZLE_DEGREE: u32 = (1 << 13) - 1; // 8,191
     /// The maximum number of prover solutions that can be included per block.
